@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.GameActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/count_image"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_margin="35dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/font_text"
+        android:text="Count"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/count_image"
+        app:layout_constraintStart_toStartOf="@id/count_image"
+        app:layout_constraintTop_toTopOf="@id/count_image" />
+
+
+    <TextView
+        android:id="@+id/count_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/my_game_font"
+        android:text="100"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/count_image"
+        app:layout_constraintStart_toStartOf="@id/count_image"
+        app:layout_constraintTop_toBottomOf="@id/count_text" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chronometer_image"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_margin="35dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chronometer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/font_text"
+        android:text="Time"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/chronometer_image"
+        app:layout_constraintStart_toStartOf="@id/chronometer_image"
+        app:layout_constraintTop_toTopOf="@id/chronometer_image" />
+
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/my_game_font"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/chronometer_image"
+        app:layout_constraintStart_toStartOf="@id/chronometer_image"
+        app:layout_constraintTop_toBottomOf="@id/chronometer_text" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_mute"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/back_items"
+        android:foregroundGravity="center"
+        android:padding="27sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mute"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/chronometer_image"
+        app:layout_constraintEnd_toStartOf="@id/chronometer_image"
+        app:layout_constraintStart_toEndOf="@id/count_image"
+        app:layout_constraintTop_toTopOf="@id/chronometer_image" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/home_btn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25sp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/home_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/restart_btn"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rotate_back"
+        android:foregroundGravity="center"
+        android:padding="25sp"
+        android:src="@drawable/rotate"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relative_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/button1"
+            style="@style/MyButton"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/button2"
+            style="@style/MyButton"
+            android:layout_toEndOf="@id/button1"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/button3"
+            style="@style/MyButton"
+            android:layout_toEndOf="@id/button2"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/button4"
+            style="@style/MyButton"
+            android:layout_marginStart="-94dp"
+            android:layout_toEndOf="@id/button3"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="4" />
+
+        <TextView
+            android:id="@+id/button5"
+            style="@style/MyButton"
+            android:layout_below="@id/button1"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="5" />
+
+        <TextView
+            android:id="@+id/button6"
+            style="@style/MyButton"
+            android:layout_below="@id/button2"
+            android:layout_toEndOf="@id/button5"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/button7"
+            style="@style/MyButton"
+            android:layout_below="@id/button3"
+            android:layout_toEndOf="@id/button6"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="7" />
+
+        <TextView
+            android:id="@+id/button8"
+            style="@style/MyButton"
+            android:layout_below="@id/button4"
+            android:layout_toEndOf="@id/button7"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="8" />
+
+        <TextView
+            android:id="@+id/button9"
+            style="@style/MyButton"
+            android:layout_below="@id/button5"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/button10"
+            style="@style/MyButton"
+            android:layout_below="@id/button6"
+            android:layout_toEndOf="@id/button9"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/button11"
+            style="@style/MyButton"
+            android:layout_below="@id/button7"
+            android:layout_toEndOf="@id/button10"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="11" />
+
+        <TextView
+            android:id="@+id/button12"
+            style="@style/MyButton"
+            android:layout_below="@id/button8"
+            android:layout_toEndOf="@id/button11"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="12" />
+
+        <TextView
+            android:id="@+id/button13"
+            style="@style/MyButton"
+            android:layout_below="@id/button9"
+            android:layout_marginTop="6dp"
+            tools:text="13" />
+
+        <TextView
+            android:id="@+id/button14"
+            style="@style/MyButton"
+            android:layout_below="@id/button10"
+            android:layout_toEndOf="@id/button13"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="14" />
+
+        <TextView
+            android:id="@+id/button15"
+            style="@style/MyButton"
+            android:layout_below="@id/button11"
+            android:layout_toEndOf="@id/button14"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="15" />
+
+        <TextView
+            android:id="@+id/button16"
+            style="@style/MyButton"
+            android:layout_below="@id/button12"
+            android:layout_toEndOf="@id/button15"
+            android:clickable="true"
+            android:focusable="true"
+            tools:text="16" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

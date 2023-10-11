@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.StartActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/text_puzzle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/puzzle_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/play_btn"
+        android:layout_width="200dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="50dp"
+        android:background="?selectableItemBackground"
+        android:scaleType="fitXY"
+        android:src="@drawable/back_btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_puzzle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_text"
+        android:text="Play"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/play_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/play_btn" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/info_btn"
+        android:layout_width="200dp"
+        android:layout_height="85dp"
+        android:background="?selectableItemBackground"
+        android:scaleType="fitXY"
+        android:src="@drawable/back_btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/play_btn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_text"
+        android:text="Info"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/info_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/info_btn" />
+
+    <!--    <androidx.appcompat.widget.AppCompatImageView-->
+    <!--        android:id="@+id/continue_btn"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="85dp"-->
+    <!--        android:background="?selectableItemBackground"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:src="@drawable/back_btn2"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/info_btn" />-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/font_text"-->
+    <!--        android:text="Continue"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/continue_btn"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/continue_btn" />-->
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_share"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/button_share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rate_btn"
+        app:layout_constraintTop_toBottomOf="@id/info_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rate_btn"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/button_rate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_share"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

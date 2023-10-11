@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="15dp"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_back">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_congrats"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_ln6fjorp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90sp"
+            android:fontFamily="@font/font_text"
+            android:text="Moves count:"
+            android:textColor="#0A4A44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lottie_congrats" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/move_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/my_game_font"
+            android:text="100"
+            android:textColor="#117A70"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@id/count_text"
+            app:layout_constraintTop_toBottomOf="@id/lottie_congrats" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/font_text"
+            android:text="Time:"
+            android:textColor="#0A4A44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/count_text" />
+
+        <Chronometer
+            android:id="@+id/chronometer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/my_game_font"
+            android:textColor="#117A70"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/time_text"
+            app:layout_constraintTop_toBottomOf="@id/count_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/menu_btn"
+            android:layout_width="150dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="25sp"
+            android:background="@drawable/back_button"
+            android:fontFamily="@font/font_text"
+            android:text="Restart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chronometer_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>
